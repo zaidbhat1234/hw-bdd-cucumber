@@ -19,8 +19,7 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  #regexp = /#{e2}.*{e1}/m
-  #regexp.match(page.body)
+  
   i = page.body.index(e1)< page.body.index(e2)
   i.should be true
 end
